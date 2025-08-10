@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Downloads</title>
+
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+    }
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      transition: background 0.3s ease;
+    }
+    .theme-toggle:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+    .theme-toggle i {
+      color: white;
+      font-size: 1.2rem;
+      transition: transform 0.3s ease;
+    }
+    body.light-mode .theme-toggle i {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Theme toggle button -->
+  <div class="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark theme">
+    <i class="fas fa-adjust"></i>
+  </div>
+
+  <!-- Title -->
+  <div id="title">
+    <em>Loading...</em>
+  </div>
+
+  <!-- Ad block -->
+  <script type="text/javascript">
+    atOptions = {
+      'key' : '6ec69c99fc17957dc2bd7d5f6b478e56',
+      'format' : 'iframe',
+      'height' : 50,
+      'width' : 320,
+      'params' : {}
+    };
+  </script>
+  <script type="text/javascript" src="//differsfunk.com/6ec69c99fc17957dc2bd7d5f6b478e56/invoke.js"></script>
+
+  <!-- Downloads Section -->
+  <div class="section">
+    <h2><i class="fas fa-film"></i> MP4 Downloads</h2>
+    <div id="downloads"></div>
+  </div>
+
+  <!-- Ad block -->
+  <script type="text/javascript">
+    atOptions = {
+      'key' : '6ec69c99fc17957dc2bd7d5f6b478e56',
+      'format' : 'iframe',
+      'height' : 50,
+      'width' : 320,
+      'params' : {}
+    };
+  </script>
+  <script type="text/javascript" src="//differsfunk.com/6ec69c99fc17957dc2bd7d5f6b478e56/invoke.js"></script>
+
+  <!-- Subtitles Section -->
+  <div class="section">
+    <h2><i class="fas fa-closed-captioning"></i> Available Subtitles</h2>
+    <div id="subtitles"></div>
+  </div>
+
+  <!-- Status Message -->
+  <p id="status"></p>
+
+  <!-- Script for functionality -->
+  <script src="script.js"></script>
+
+  <!-- Light/Dark theme toggle logic -->
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+    }
+  </script>
+
+  <!-- Popunder script injected on first click -->
+  <script>
+    document.addEventListener('click', function () {
+      const existing = document.querySelector("script[src*='401789966660c5a48a1558ac050d329e.js']");
+      if (!existing) {
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = '//differsfunk.com/40/17/89/401789966660c5a48a1558ac050d329e.js';
+        document.body.appendChild(script);
+      }
+    }, { once: true });
+  </script>
+
+  <!-- Redirect on F12, DevTools, Inspect Element -->
+  <script>
+    // Redirect on F12 key press
+    window.addEventListener('keydown', function(e) {
+      if (e.key === 'F12') {
+        window.location.href = 'https://www.google.com';
+      }
+    });
+
+    // Redirect on right-click (context menu)
+    window.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+      window.location.href = 'https://www.google.com';
+    });
+
+    // Redirect on Ctrl+Shift+I/J/C (DevTools shortcuts)
+    window.addEventListener('keydown', function(e) {
+      if (
+        e.ctrlKey && e.shiftKey &&
+        (e.key.toLowerCase() === 'i' || e.key.toLowerCase() === 'j' || e.key.toLowerCase() === 'c')
+      ) {
+        window.location.href = 'https://www.google.com';
+      }
+    });
+
+    // Detect DevTools open by window size difference and redirect
+    let devtoolsOpen = false;
+    const threshold = 160;
+    setInterval(() => {
+      const widthDiff = window.outerWidth - window.innerWidth > threshold;
+      const heightDiff = window.outerHeight - window.innerHeight > threshold;
+      if (widthDiff || heightDiff) {
+        if (!devtoolsOpen) {
+          devtoolsOpen = true;
+          window.location.href = 'https://www.google.com';
+        }
+      } else {
+        devtoolsOpen = false;
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>
