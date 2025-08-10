@@ -1,0 +1,24 @@
+{
+  "rewrites": [
+    {
+      "source": "/movie",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/tv",
+      "destination": "/index.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/api/movie",
+      "destination": "/api/movie",
+      "statusCode": 200
+    },
+    {
+      "source": "/api/tv",
+      "destination": "/api/tv",
+      "statusCode": 200
+    }
+  ]
+}
