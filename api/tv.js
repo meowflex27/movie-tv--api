@@ -31,7 +31,7 @@ export default async function handler(req, res) {
 
     // ✅ Format download URLs using your new proxy
     const downloads = result.data.downloads.map(d => {
-      const proxyUrl = `https://proxy-download-sandy.vercel.app/api/download?url=${encodeURIComponent(d.url)}`;
+      const proxyUrl = `https://meowflex.com/proxy.php?url=${encodeURIComponent(d.url)}`;
       return {
         resolution: d.resolution,
         size: (parseInt(d.size) / 1024 / 1024).toFixed(1), // MB
