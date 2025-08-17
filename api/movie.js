@@ -31,7 +31,7 @@ export default async function handler(req, res) {
       return {
         resolution: d.resolution,
         size: (parseInt(d.size) / 1024 / 1024).toFixed(1), // MB
-        url: `https://proxy-download-sandy.vercel.app/api/download?url=${encodedOriginalUrl}&n=${encodeURIComponent(safeTitle)}.mp4`
+        url: `https://meowflex.com/proxy.php?url=${encodedOriginalUrl}&n=${encodeURIComponent(safeTitle)}.mp4`
       };
     });
 
